@@ -4,7 +4,7 @@
 ![Project2](https://img.shields.io/badge/23_fall-project_2-green)
 
 Database course project. Backend for video websites.
-[*[Read my report]*](Report12210729.pdf)
+[*[Read my report]*](Report_12210729.pdf)
 
 ## Prerequisites
 
