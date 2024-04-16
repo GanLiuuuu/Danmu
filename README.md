@@ -3,9 +3,7 @@
 ![Course](https://img.shields.io/badge/sustech-cs307%2F213-blue)
 ![Project2](https://img.shields.io/badge/23_fall-project_2-green)
 
-The world-leading ~~fictional~~ Danmaku video website, _Synchronized User-generated Subtitle Technology Company
-(SUSTC)_, is now hiring your team to build a new backend system for them. Please use the code in this repository as a
-template to start your work.
+Database course project. Backend for video websites.
 
 ## Prerequisites
 
@@ -26,29 +24,8 @@ template to start your work.
 
 ## Getting started
 
-### 1. Setup your repository
 
-Create a private copy of [the template repository](https://github.com/hezean/sustc) by clicking
-the [Use this template](https://github.com/hezean/sustc/generate) button,
-or [download a zip copy](https://github.com/hezean/sustc/archive/refs/heads/main.zip) to work without using git.
-
-Consider _watching_ the template repository to track discussions/issues,
-and receive notifications when we update the template.
-
-> [!NOTE]  
-> Please check the updates in the code framework regularly.
-> To apply the changes to your repository, you can use the following commands:
-> ```shell
-> # this command is only required for the first time
-> git remote add upstream https://github.com/hezean/sustc.git  # or `git@github.com:hezean/sustc.git` for git protocol
-> 
-> git fetch upstream
-> # better to commit your changes before merging
-> git merge upstream/main --allow-unrelated-histories
-> # then resolve the conflicts (if any) and commit the changes
-> ```
-
-### 2. Understand the project structure
+### Understand the project structure
 
 <details>
 <summary><b>Expand this section to see the sample code tree</b></summary>
@@ -104,7 +81,7 @@ Basically, you only need to focus on three directories:
 Please note that your submission is built by the `sustc-api` module, any modification to the `sustc-runner` module will
 not take effect in the final benchmark.
 
-### 3. Run locally
+### Run locally
 
 After setting up your database and modifying the configuration file, you may run the program locally in two modes.
 
@@ -131,53 +108,7 @@ To run the benchmark, use the **`benchmark`** Gradle task.
 Note that you need to implement all service interfaces to run the benchmark.
 You may create dummy implementations (e.g. throw UnsupportedOperationException) before actually implementing them.
 
-## Submitting your work
 
-As previously mentioned, you need to submit a jar file that contains your implementation of the services
-(and any dependencies you added). To build it, run the **`submitJar`** Gradle task.
-
-```shell
-./gradlew submitJar
-```
-
-Then you should find a `submit` folder under the root of project, containing a single jar file
-(its size should be about 8~10 MB if you didn't add any additional dependencies).
-**We don't accept jar files larger than 20 MB, so please don't add too much dependencies.**
-
-> If any jar file presents in the `submit` folder, the runner will use it
-> instead of the latest code in `sustc-api` module.
-
-Then create exactly one SQL file (any filename is acceptable) under the `submit` folder
-that could properly initialize your database.
-You don't need to include a `create database` statement in your submission, as we will create the database for you.
-
-```text
-submit              # Under the root of project
-├── schema.sql      # Any filename is acceptable
-└── sustc-api.jar   # Produced by `submitJar` task
-```
-
-Then zip the `submit` folder (unzip should produce a folder named `submit`, instead of any other folder name, or the
-separated jar and sql files).
-
-Also, similar to other courses, we require you to submit your source code for academic purposes and plagiarism
-detection. Please run the `clean` task before archiving your source code, which will delete the built files.
-
-```shell
-./gradlew clean
-```
-
-After cleaning up, the source archive of __sustc-api__ should not be larger than 10 MB.
-
-Finally, upload these zip files with any other resources as specified to Blackboard.
-
-## More Information
-
-Please also read the project requirements document posted on [Blackboard](https://bb.sustech.edu.cn).
-
-If there's anything ambiguous about the document or the instruction above,
-feel free to [open an issue](https://github.com/hezean/sustc/issues/new) and ask.
-Your question may also help others to better understand this project. 🔥
 
 ## Useful links
 
