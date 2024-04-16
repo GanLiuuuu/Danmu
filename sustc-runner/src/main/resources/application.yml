@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sustech  # change this to your own jdbc url
+    username: postgres  # change this to your own username (avoid using a superuser)
+    password: 123123  # change this to your own password
+#  redis:
+#    host: localhost
+#    port: 6379
+  cache:
+    type: simple
+    cache-names: "userInfo"
+
+
+#guava:
+#  cache:
+#    config:
+#      # 并发级别为,并发级别是指可以同事写缓存的线程数
+#      concurrencyLevel: 8
+#      #缓存最大容量,超过之后会按照LRU最近最少使用算法来移除缓存项
+#      maximumSize: 100
+#      #设置写缓存后,多长时间过期  时间单位为毫秒
+#      expireAfterWrite: 10000
+#      #设置缓存容量的初始容量
+#      initialCapacity: 10
+#      #如果缓存过期，恰好有多个线程读取同一个key的值，那么guava只允许一个线程去加载数据，其余线程
+#      #阻塞。
+#      #这虽然可以防止大量请求穿透缓存，但是效率低下。
+#      #使用refreshAfterWrite可以做到：只阻塞加载数据的线程，其余线程返回旧数据。
+#      #时间单位为 毫秒
+#      refreshAfterWrite: 1000
+
+
+
+
+logging:
+  level:
+    root: off
+    io.sustc: debug
+
+---
+
+benchmark:
+  data-path: data
+  student-mode: true
